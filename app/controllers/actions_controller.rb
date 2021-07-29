@@ -1,7 +1,7 @@
 class ActionsController < ApplicationController
 
     def index
-        actions = Action.all 
+        action = Action.all 
         render json: ActionSerializer.new(action)
     end
 
@@ -35,7 +35,7 @@ class ActionsController < ApplicationController
     end
 
     private
-    def actions_params
+    def action_params
         params.require(:action).permit(:name, :description, :category_id)
     end
 end

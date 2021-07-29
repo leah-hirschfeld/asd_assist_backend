@@ -1,0 +1,94 @@
+Started GET "/actions" for 127.0.0.1 at 2021-07-27 17:44:50 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ActionsController#index as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 9123)
+
+
+  
+NameError (undefined local variable or method `action' for #<ActionsController:0x007f85e917cc28>
+Did you mean?  actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-07-27 17:44:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/actions" for 127.0.0.1 at 2021-07-27 17:45:29 -0700
+Processing by ActionsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mAction Load (0.4ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms | Allocations: 2094)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
+Started POST "/actions" for ::1 at 2021-07-28 21:48:03 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ActionsController#create as JSON
+  Parameters: {"name"=>"ASD Diagnosis", "description"=>"Get ASD diagnosis"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4021)
+
+
+  
+NoMethodError (undefined method `permit' for "create":String):
+  
+app/controllers/actions_controller.rb:39:in `action_params'
+app/controllers/actions_controller.rb:14:in `create'
+Started GET "/actions" for ::1 at 2021-07-28 21:48:11 -0700
+Processing by ActionsController#index as */*
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 3055)
+
+
+  
+NameError (undefined local variable or method `action' for #<ActionsController:0x007fd1b5815298>
+Did you mean?  actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
+Started POST "/actions" for ::1 at 2021-07-28 21:48:25 -0700
+Processing by ActionsController#create as JSON
+  Parameters: {"name"=>"ASD Diagnosis", "description"=>"Get ASD diagnosis"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1007)
+
+
+  
+NoMethodError (undefined method `permit' for "create":String):
+  
+app/controllers/actions_controller.rb:39:in `action_params'
+app/controllers/actions_controller.rb:14:in `create'
+Started GET "/actions" for ::1 at 2021-07-28 21:48:29 -0700
+Processing by ActionsController#index as */*
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1672)
+
+
+  
+NameError (undefined local variable or method `action' for #<ActionsController:0x007fd1b504c430>
+Did you mean?  actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
+Started GET "/actions" for 127.0.0.1 at 2021-07-28 21:48:31 -0700
+Processing by ActionsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1661)
+
+
+  
+NameError (undefined local variable or method `action' for #<ActionsController:0x007fd1d5112278>
+Did you mean?  actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
+Started GET "/actions" for 127.0.0.1 at 2021-07-28 21:48:53 -0700
+Processing by ActionsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mAction Load (0.6ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms | Allocations: 2085)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: actions):
+  
+app/controllers/actions_controller.rb:5:in `index'
