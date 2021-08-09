@@ -8,11 +8,11 @@
 
 diagnosis = Category.create(name: 'diagnosis')
 insurance = Category.create(name: 'insurance')
-treatment = Category.create(name: 'treatent')
+treatment = Category.create(name: 'treatment')
 
-Action.create([
-    {name: 'ASD Diagnosis', description: 'get diagnosis from appropraite clinician', category: diagnosis},
-    {name: 'Get insurance', description: 'make sure you have insurance', category: insurance},
-    {name: 'Clinic takes insurance', description: 'confirm the clinic takes your insurance', category: insurance},
-    {name: 'Sessions',description: 'schedule consistent sessions', category: treatment},
-])
+ Action.create([
+     {name: 'ASD Diagnosis', description: 'get diagnosis from appropraite clinician', category: diagnosis},
+     {name: 'Get insurance', description: 'make sure you have insurance', category: insurance},
+     {name: 'Clinic takes insurance', description: 'confirm the clinic takes your insurance', category: insurance},
+     {name: 'Sessions',description: 'schedule consistent sessions', category: treatment},
+ ])
