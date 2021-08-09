@@ -92,3 +92,14 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms | Allocations: 
 ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: actions):
   
 app/controllers/actions_controller.rb:5:in `index'
+Started GET "/actions" for 127.0.0.1 at 2021-07-28 21:50:05 -0700
+Processing by ActionsController#index as HTML
+  [1m[36mAction Load (0.6ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms | Allocations: 702)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: actions):
+  
+app/controllers/actions_controller.rb:5:in `index'

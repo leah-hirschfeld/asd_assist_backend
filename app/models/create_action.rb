@@ -1,0 +1,2 @@
+class CreateAction < ApplicationRecord
+end
