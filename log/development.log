@@ -3981,3 +3981,1468 @@ Processing by ActionsController#create as JSON
 Completed 200 OK in 18ms (Views: 0.7ms | ActiveRecord: 4.9ms | Allocations: 2907)
 
 
+Started GET "/actions" for ::1 at 2021-08-09 20:06:08 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:06:08 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 1.0ms | Allocations: 6520)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 1.3ms | Allocations: 10925)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:07:51 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:07:51 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.9ms | Allocations: 5519)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 1.3ms | Allocations: 10682)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:11:56 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:11:56 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 1.0ms | Allocations: 6756)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.3ms | Allocations: 11101)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:13:26 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:13:26 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 1.3ms | Allocations: 6734)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.8ms | Allocations: 10925)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:14:03 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:14:03 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 1.0ms | Allocations: 6012)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 1.7ms | Allocations: 10922)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:15:45 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:15:45 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Processing by CategoriesController#index as */*
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 1.0ms | Allocations: 5595)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 1.4ms | Allocations: 11101)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:15:47 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:15:47 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.9ms | Allocations: 7552)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 2.7ms | Allocations: 11093)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:17:10 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Started GET "/categories" for ::1 at 2021-08-09 20:17:10 -0700
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.8ms | Allocations: 5119)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 1.5ms | Allocations: 11294)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:18:52 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:18:52 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.9ms | Allocations: 5787)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 1.4ms | Allocations: 10921)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:21:13 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:21:13 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.6ms | Allocations: 6734)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 1.4ms | Allocations: 11107)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:22:42 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:22:42 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.9ms | Allocations: 7181)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 1.5ms | Allocations: 10921)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:23:00 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:23:00 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 1.0ms | Allocations: 7691)
+
+
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 1.4ms | Allocations: 10882)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:31:15 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:31:15 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAction Load (0.7ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 2.1ms | Allocations: 11419)
+
+
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 2.5ms | Allocations: 11917)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:33:25 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:33:25 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.9ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 1.0ms | Allocations: 6166)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 2.1ms | Allocations: 10971)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:36:40 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:36:40 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.8ms | Allocations: 7181)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 1.6ms | Allocations: 10925)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:38:22 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:38:22 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 1.0ms | Allocations: 5946)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 1.5ms | Allocations: 10760)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:39:14 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:39:14 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.9ms | Allocations: 6508)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 1.7ms | Allocations: 11102)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:39:48 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:39:48 -0700
+Processing by CategoriesController#index as */*
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 1.0ms | Allocations: 5947)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 1.4ms | Allocations: 10760)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:41:54 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:41:54 -0700
+Processing by CategoriesController#index as */*
+Processing by ActionsController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 1.3ms | Allocations: 5596)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 1.5ms | Allocations: 10760)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:42:26 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:42:26 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 1.0ms | Allocations: 5170)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 1.5ms | Allocations: 10922)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:53:38 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:53:38 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (4.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 1.2ms | Allocations: 6942)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 5.4ms | Allocations: 12308)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:53:42 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:53:42 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.8ms | Allocations: 6740)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 1.5ms | Allocations: 10927)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:53:56 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:53:56 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 1.1ms | Allocations: 5698)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 1.8ms | Allocations: 10371)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:55:01 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:55:01 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.0ms | Allocations: 4486)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.9ms | Allocations: 10348)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:56:04 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:56:04 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms | Allocations: 4913)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 1.4ms | Allocations: 10344)
+
+
+Started PATCH "/actions/4" for ::1 at 2021-08-09 20:56:11 -0700
+Processing by ActionsController#update as JSON
+  Parameters: {"name"=>"Sessions", "description"=>"schedule consistent session", "id"=>"4"}
+  [1m[36mAction Load (0.6ms)[0m  [1m[34mSELECT "actions".* FROM "actions" WHERE "actions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:29:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/actions_controller.rb:30:in `update'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:30:in `update'
+  [1m[36mAction Update (3.6ms)[0m  [1m[33mUPDATE "actions" SET "description" = ?, "updated_at" = ? WHERE "actions"."id" = ?[0m  [["description", "schedule consistent session"], ["updated_at", "2021-08-10 03:56:11.694587"], ["id", 4]]
+  ↳ app/controllers/actions_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/actions_controller.rb:30:in `update'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 5.7ms | Allocations: 3343)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:56:17 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:56:17 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.4ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.9ms | Allocations: 6079)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 1.3ms | Allocations: 10921)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:57:42 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:57:42 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.6ms | Allocations: 5653)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 1.0ms | Allocations: 11099)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 20:57:52 -0700
+Started GET "/actions" for ::1 at 2021-08-09 20:57:52 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.8ms | Allocations: 6128)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 1.3ms | Allocations: 10344)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:58:17 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:58:17 -0700
+Processing by CategoriesController#index as */*
+Processing by ActionsController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.0ms | Allocations: 7618)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 1.4ms | Allocations: 10764)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:58:43 -0700
+Processing by ActionsController#index as */*
+Started GET "/categories" for ::1 at 2021-08-09 20:58:43 -0700
+  [1m[36mAction Load (0.5ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.9ms | Allocations: 5204)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 1.5ms | Allocations: 11118)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 20:58:58 -0700
+Started GET "/categories" for ::1 at 2021-08-09 20:58:58 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Processing by CategoriesController#index as */*
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 1.0ms | Allocations: 6102)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 1.2ms | Allocations: 11101)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:00:06 -0700
+Started GET "/categories" for ::1 at 2021-08-09 21:00:06 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.8ms | Allocations: 7358)
+
+
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 1.6ms | Allocations: 11104)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:00:31 -0700
+Started GET "/categories" for ::1 at 2021-08-09 21:00:31 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Processing by CategoriesController#index as */*
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 1.0ms | Allocations: 5595)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 1.6ms | Allocations: 11110)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:00:32 -0700
+Started GET "/categories" for ::1 at 2021-08-09 21:00:32 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 5762)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.9ms | Allocations: 10921)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 21:00:39 -0700
+Started GET "/actions" for ::1 at 2021-08-09 21:00:39 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.8ms | Allocations: 6752)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 1.4ms | Allocations: 10921)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 21:01:09 -0700
+Started GET "/actions" for ::1 at 2021-08-09 21:01:09 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mAction Load (0.3ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.1ms | Allocations: 4486)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 1.4ms | Allocations: 10344)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:01:10 -0700
+Started GET "/categories" for ::1 at 2021-08-09 21:01:10 -0700
+Processing by ActionsController#index as */*
+Processing by CategoriesController#index as */*
+  [1m[36mAction Load (0.7ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.6ms | Allocations: 6011)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 1.5ms | Allocations: 11108)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:01:15 -0700
+Processing by ActionsController#index as */*
+Started GET "/categories" for ::1 at 2021-08-09 21:01:15 -0700
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.9ms | Allocations: 5280)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 1.5ms | Allocations: 11121)
+
+
+Started GET "/actions" for ::1 at 2021-08-09 21:01:18 -0700
+Started GET "/categories" for ::1 at 2021-08-09 21:01:18 -0700
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+Processing by CategoriesController#index as */*
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.9ms | Allocations: 6731)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 1.6ms | Allocations: 11099)
+
+
+Started GET "/categories" for ::1 at 2021-08-09 21:03:53 -0700
+Started GET "/actions" for ::1 at 2021-08-09 21:03:53 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ActionsController#index as */*
+  [1m[36mAction Load (0.2ms)[0m  [1m[34mSELECT "actions".* FROM "actions"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 2]]
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms | Allocations: 6379)
+
+
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "actions"."id" FROM "actions" WHERE "actions"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/actions_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.8ms | Allocations: 10526)
+
+
