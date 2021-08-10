@@ -19,9 +19,9 @@ class ActionsController < ApplicationController
         end
     end
 
-    def destory
+    def destroy
         action = Action.find(params[:id])
-        action.destory
+        action.destroy
         render json: {message: "deleted #{action.name}"}
     end
 
@@ -36,6 +36,6 @@ class ActionsController < ApplicationController
 
     private
     def action_params
-        params.require(:action).permit(:name, :description, :category_id)
+        params.permit(:name, :description, :category_id)
     end
 end
